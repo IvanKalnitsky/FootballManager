@@ -10,14 +10,15 @@ import Foundation
 class InstatPresenter {
     
     weak var view: InstatViewProtocol?
-    let param = MatchInfoRequestBodyParams(pSport: 1, pMatchID: 1724836)
-    
+    let sportID = 1
+    let matchID = 1724836
+
     init(with view: InstatViewProtocol) {
         self.view = view
     }
     
     func loadLinks() {
-        APIManager.shared.getMatchLinks(sportID: param.pSport, matchID: param.pMatchID) { links in
+        APIManager.shared.getMatchLinks(sportID: sportID, matchID: matchID) { links in
             DispatchQueue.main.async { [self] in
                 guard let links = links else { return }
                 let videoLinksTime1 = links.filter { $0.period == 1
@@ -30,20 +31,14 @@ class InstatPresenter {
     }
     
     func loadInfo() {
-        APIManager.shared.getMatchInfo(sportID: param.pSport, matchID: param.pMatchID) { info in
+        APIManager.shared.getMatchInfo(sportID: sportID, matchID: matchID) { info in
             DispatchQueue.main.async { [self] in
                 guard let data = info else { return }
-                let date = convertDateFormater(data.date)
+                let date = data.date.convertDateFormater()
                 self.view?.showMatchInfo(data: data,date: "\(date)")
             }
         }
     }
-    
-    private func convertDateFormater(_ date: String) -> String {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
-            let newDate = dateFormatter.date(from: date)
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            return  dateFormatter.string(from: newDate!)
-        }
 }
+
+

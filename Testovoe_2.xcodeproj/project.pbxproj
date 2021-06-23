@@ -20,6 +20,7 @@
 		821C6BE42680AC890037FCF6 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6BE32680AC890037FCF6 /* Presenter.swift */; };
 		821C6BE62680ADD00037FCF6 /* InstatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6BE52680ADD00037FCF6 /* InstatViewController.swift */; };
 		821C6BE92680DECC0037FCF6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6BE82680DECC0037FCF6 /* PlayerViewController.swift */; };
+		821C6BEE268308F40037FCF6 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6BED268308F40037FCF6 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		821C6BE32680AC890037FCF6 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		821C6BE52680ADD00037FCF6 /* InstatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstatViewController.swift; sourceTree = "<group>"; };
 		821C6BE82680DECC0037FCF6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		821C6BED268308F40037FCF6 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				821C6BD526804A660037FCF6 /* API */,
+				821C6BEA268308C10037FCF6 /* Core */,
 				821C6BE22680AC6F0037FCF6 /* Presenter */,
 				821C6BE72680B58C0037FCF6 /* Scene */,
 				821C6BE12680ABCC0037FCF6 /* SupportingFiles */,
@@ -126,6 +129,30 @@
 				821C6BB8267F654F0037FCF6 /* SceneDelegate.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		821C6BEA268308C10037FCF6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				821C6BEB268308CF0037FCF6 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		821C6BEB268308CF0037FCF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				821C6BEC268308DA0037FCF6 /* String */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		821C6BEC268308DA0037FCF6 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				821C6BED268308F40037FCF6 /* DateFormatter.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +230,7 @@
 				821C6BD726804A7D0037FCF6 /* APIManager.swift in Sources */,
 				821C6BDD26804B050037FCF6 /* MatchLink.swift in Sources */,
 				821C6BDF26804B210037FCF6 /* MatchLinksRequestBody.swift in Sources */,
+				821C6BEE268308F40037FCF6 /* DateFormatter.swift in Sources */,
 				821C6BB7267F654F0037FCF6 /* AppDelegate.swift in Sources */,
 				821C6BDB26804AE00037FCF6 /* MatchData.swift in Sources */,
 				821C6BD926804ABD0037FCF6 /* MatchInfoRequestBody.swift in Sources */,

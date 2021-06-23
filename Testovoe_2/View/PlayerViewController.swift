@@ -13,11 +13,12 @@ class PlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        videoPlayer()
+        openVideoPlayer()
     }
     
-    func videoPlayer() {
-        let player = AVPlayer(url: URL(string: urlString)!)
+    func openVideoPlayer() {
+        guard  let url = URL(string: urlString) else { return }
+        let player = AVPlayer(url: url)
                 let controller = AVPlayerViewController()
         present(controller, animated: true) {  }
                 controller.player = player

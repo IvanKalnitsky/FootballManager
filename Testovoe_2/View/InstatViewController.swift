@@ -46,6 +46,7 @@ class InstatViewController: UIViewController {
     }
     
     func createButtonsForVideos(videosFirstTime: MatchLinks, videosSecondTime: MatchLinks) {
+        
         for index in videosFirstTime.indices {
             let button = UIButton()
             button.tag = index
